@@ -33,8 +33,8 @@ const char *skiparg(const char *args)
 
 const std::string unquote(std::string input)
 {
-	if ((input[0] == input[input.size() - 1] && input[0] == '\'') ||
-		(input[0] == input[input.size() - 1] && input[0] == '"'))
+	if ((input[0] == '\'' || input[0] == '\"') &&
+		input[0] == input[input.size() - 1])
 	{
 		input[input.size() - 1] = '\0';
 		return input.c_str() + 1;
