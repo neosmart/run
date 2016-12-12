@@ -4,23 +4,6 @@
 #include "utf8.h"
 #pragma comment(lib, "shell32.lib")
 
-//Escape any quotes
-std::string escape(const std::string input)
-{
-	std::string output;
-	for (auto c : input)
-	{
-		if (c == '"')
-		{
-			output += '\\';
-		}
-
-		output += c;\
-	}
-
-	return output;
-}
-
 //skip past a single, un-nested, quoted or unquoted argument
 const char *skiparg(const char *args)
 {
