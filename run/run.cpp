@@ -82,7 +82,8 @@ int CALLBACK WinMain(
 	args = skiparg(args);
 	sexi.lpParameters = args;
 
-	sexi.nShow = SW_NORMAL;
+	//sexi.nShow = SW_NORMAL;
+	sexi.nShow = SW_HIDE;
 	BOOL result = ShellExecuteEx(&sexi);
 
 	if (result == FALSE)
